@@ -27,19 +27,25 @@ void Board::initialize() {
         grid[1][j] = new Pawn(false); // black
         grid[6][j] = new Pawn(true);  // white
     }
-
-    // 3. Rook
-    grid[0][0] = grid[0][7] = new Rook(false);
-    grid[7][0] = grid[7][7] = new Rook(true);
-
-    // 4. Knight
-    grid[0][1] = grid[0][6] = new Knight(false);
-    grid[7][1] = grid[7][6] = new Knight(true);
-
-    // 5. Bishop
-    grid[0][2] = grid[0][5] = new Bishop(false);
-    grid[7][2] = grid[7][5] = new Bishop(true);
-
+    // 3.Rook
+    grid[0][0] = new Rook(false);
+    grid[0][7] = new Rook(false);
+    grid[7][0] = new Rook(true);
+    grid[7][7] = new Rook(true);
+    
+    // 4.Knight
+    grid[0][1] = new Knight(false);
+    grid[0][6] = new Knight(false);
+    grid[7][1] = new Knight(true);
+    grid[7][6] = new Knight(true);
+    
+    // 5.Bishop
+    grid[0][2] = new Bishop(false);
+    grid[0][5] = new Bishop(false);
+    grid[7][2] = new Bishop(true);
+    grid[7][5] = new Bishop(true);
+    
+    
     // 6. Queen
     grid[0][3] = new Queen(false);
     grid[7][3] = new Queen(true);
